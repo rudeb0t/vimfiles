@@ -28,3 +28,6 @@
 [submodule "bundle/vim-qml"]
 	path = bundle/vim-qml
 	url = https://github.com/peterhoeg/vim-qml.git
+[submodule "bundle/vimwiki"]
+	path = bundle/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git
