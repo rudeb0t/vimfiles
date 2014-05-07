@@ -24,10 +24,18 @@ map <silent><C-right> <C-]>
 
 set number
 set statusline=%F%m%r%h%w\ [%{&ff}%{(&ft==\"\"?\"\":\",\".&ft)},%{\"\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\"+BOM\":\"\").\"]\ \"}%=%04l/%L,%04v(%p%%)\ %{fugitive#statusline()}
+set laststatus=2
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,moc_*,*.dylib,*.o
 
 let python_highlight_all=1
+let g:netrw_list_hide= '.*\.swp$,\~$,\.orig$'
+
+" When editing a file, always jump to the last cursor position
+autocmd BufReadPost *
+\ if line("'\"") > 0 && line ("'\"") <= line("$") |
+\   exe "normal! g'\"" |
+\ endif
 
 execute pathogen#infect()
 execute pathogen#helptags()
