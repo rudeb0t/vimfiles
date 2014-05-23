@@ -20,7 +20,7 @@ set bs=2
 set number
 set laststatus=2
 set statusline=%F%m%r%h%w\ [%{&ff}%{(&ft==\"\"?\"\":\",\".&ft)},%{\"\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\"+BOM\":\"\").\"]\ \"}%=%04l/%L,%04v(%p%%)\ %{fugitive#statusline()}
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,moc_*,*.dylib,*.o,*.obj,*.exe,*.dll,*.lib,*.a,*.msi,*.pyc,*.pyo,*.wixobj,*.wixpdb
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,moc_*,*.dylib,*.o,*.obj,*.exe,*.dll,*.lib,*.a,*.msi,*.pyc,*.pyo,*.wixobj,*.wixpdb,.DS_Store,.git*,.qmake.stash
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd BufNewFile,BufRead *.wsgi set filetype=python
@@ -31,10 +31,9 @@ autocmd BufRead,BufNewFile *.wxs,*.wixobj,*.wxi set filetype=xml
 map <silent><C-left> <C-T>
 map <silent><C-right> <C-]>
 
-let g:netrw_list_hide='.*/tmp/.*,.*\.so$,.*\.swp$,.*\.zip$,moc_.*,.*\.dylib$,.*\.o$,.*\.obj$,.*\.exe\**$,.*\.dll$,.*\.lib$,.*\.a$,.*\.msi$,.*\.pyc,.*\.pyo,.*\.wixobj$,.*\.wixpdb$'
+let g:netrw_list_hide='.*/tmp/.*,.*\.so$,.*\.swp$,.*\.zip$,moc_.*,.*\.dylib$,.*\.o$,.*\.obj$,.*\.exe\**$,.*\.dll$,.*\.lib$,.*\.a$,.*\.msi$,.*\.pyc,.*\.pyo,.*\.wixobj$,.*\.wixpdb$,\.DS_Store,\.git.*,\.qmake\.stash'
 
 let python_highlight_all=1
-let g:netrw_list_hide= '.*\.swp$,\~$,\.orig$'
 
 " When editing a file, always jump to the last cursor position
 autocmd BufReadPost *
