@@ -50,5 +50,11 @@ if has("multi_byte")
 	set fileencodings=ucs-bom,utf-8,latin-1
 endif
 
+augroup VimCSS3Syntax
+  autocmd!
+
+  autocmd FileType css setlocal iskeyword+=-
+augroup END
+
 execute pathogen#infect()
 execute pathogen#helptags()
