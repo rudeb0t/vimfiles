@@ -19,3 +19,4 @@ Included as submodules in `bundle/`:
 - vim-qml
 - vim-surround
 - vimwiki
+- vim-css3-syntax
