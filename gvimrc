@@ -5,7 +5,7 @@ unmenu ToolBar
 unmenu! ToolBar
 set cursorline
 if has('mac')
-  set guifont=Monaco:h12
+  set guifont=Source\ Code\ Pro:h14,Monaco:h12
 endif
 
 if has('win32')
