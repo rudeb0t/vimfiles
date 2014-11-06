@@ -20,7 +20,7 @@ set bs=2
 set number
 set laststatus=2
 set statusline=%F%m%r%h%w\ [%{&ff}%{(&ft==\"\"?\"\":\",\".&ft)},%{\"\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\"+BOM\":\"\").\"]\ \"}%=%04l/%L,%04v(%p%%)\ %{fugitive#statusline()}
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,moc_*,*.dylib,*.o,*.obj,*.exe,*.dll,*.lib,*.a,*.msi,*.pyc,*.pyo,*.wixobj,*.wixpdb,.DS_Store,.git*,.qmake.stash
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,moc_*,*.dylib,*.o,*.obj,*.exe,*.dll,*.lib,*.a,*.msi,*.pyc,*.pyo,*.wixobj,*.wixpdb,.DS_Store,.git*,.qmake.stash,node_modules
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd BufNewFile,BufRead *.wsgi set filetype=python
