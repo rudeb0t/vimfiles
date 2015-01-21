@@ -12,7 +12,6 @@ set autowrite
 set hidden
 set modeline
 set autoread
-set colorcolumn=80
 set fileencodings=utf8,gbk
 set fileformat=unix
 set ffs=unix,dos
@@ -58,3 +57,6 @@ augroup END
 
 execute pathogen#infect()
 execute pathogen#helptags()
+
+highlight ColorColumn ctermbg=lightgray ctermfg=black guibg=magenta guifg=yellow
+call matchadd('ColorColumn', '\%80v', 100)
