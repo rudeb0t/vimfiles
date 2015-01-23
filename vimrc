@@ -59,4 +59,5 @@ execute pathogen#infect()
 execute pathogen#helptags()
 
 highlight ColorColumn ctermbg=lightgray ctermfg=black guibg=magenta guifg=yellow
-call matchadd('ColorColumn', '\%80v', 100)
+autocmd BufReadPost * call matchadd('ColorColumn', '\%80v', 100)
+autocmd WinEnter * call matchadd('ColorColumn', '\%80v', 100)
