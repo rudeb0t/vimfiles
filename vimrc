@@ -61,3 +61,15 @@ execute pathogen#helptags()
 highlight ColorColumn ctermbg=lightgray ctermfg=black guibg=magenta guifg=yellow
 autocmd BufReadPost * call matchadd('ColorColumn', '\%80v', 100)
 autocmd WinEnter * call matchadd('ColorColumn', '\%80v', 100)
+
+let g:syntastic_python_checkers = ['flake8']
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_enable_balloons = 1
+let g:syntastic_auto_jump=1
