@@ -29,7 +29,7 @@ Included as submodules in `bundle/`:
 Clone the repository:
 
 ```
-git clone https://github.com/rudeb0t/vimfiles.git ~/.vim
+git clone --recurse-submodule https://github.com/rudeb0t/vimfiles.git ~/.vim
 ```
 
 Either create a `.vimrc` with the following:
@@ -59,7 +59,7 @@ cd ~
 Clone the repository:
 
 ```
-git clone https://github.com/rudeb0t/vimfiles.git
+git clone --recurse-submodule https://github.com/rudeb0t/vimfiles.git
 ```
 
 Create a `_vimrc` with the following:
